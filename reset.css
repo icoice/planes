@@ -9,22 +9,23 @@
  * lv4 影响元素外观以及体积
  * lv5 影响元素外观
  */
+@import 'base.css';
 @import 'media.css';
 
 html, body {
-  @mixin clearSpan;
+  @mixin clear-span;
 }
 
 h1,h2,h3,h4,h5,h6 {
-  @mixin clearSpan;
+  @mixin clear-span;
 }
 
 span, del, b, i, p {
-  @mixin clearSpan;
+  @mixin clear-span;
 }
 
 ul, ol {
-  @mixin clearSpan;
+  @mixin clear-span;
 }
 
 li {

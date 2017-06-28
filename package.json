@@ -1,0 +1,17 @@
+{
+  "name": "planes",
+  "version": "0.0.1",
+  "description": "planes",
+  "repository" : {
+    "type": "git",
+    "url": "https://github.com/icoice/planes"
+  },
+  "engines": {
+    "node": ">=5.1.1"
+  },
+  "keywords": [
+    "plane, ui"
+  ],
+  "author": "chenfei",
+  "license": "MIT"
+}

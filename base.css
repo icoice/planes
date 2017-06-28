@@ -1,5 +1,29 @@
 /* 清除内外边距 */
-@define-mixin clearSpan {
+@define-mixin clear-span {
     margin: 0;
     padding: 0;
+}
+
+/*  封闭元素 */
+@define-mixin close-element {
+    position: relative;
+    overflow: hidden;
+}
+
+/*  满宽 */
+@define-mixin full-width {
+    width: 100%;
+}
+
+/*  行 */
+@define-mixin row $amount {
+    ul {
+        @mixin full-width;
+        @mixin close-element;
+        li {
+            @mixin close-element;
+            float: left;
+            width: calc(100 / $(amount))%
+        }
+    }
 }
