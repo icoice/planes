@@ -1,0 +1,39 @@
+/***
+ * 重写元素的默认样式
+ *
+ * css属性书写规范
+ * lv0 影响元素显示
+ * lv1 影响元素位置以及层次
+ * lv2 影响元素的外内边距
+＊lv3 影响元素体积
+ * lv4 影响元素外观以及体积
+ * lv5 影响元素外观
+ */
+@import 'media.css';
+
+html, body {
+  @mixin clearSpan;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @mixin clearSpan;
+}
+
+span, del, b, i, p {
+  @mixin clearSpan;
+}
+
+ul, ol {
+  @mixin clearSpan;
+}
+
+li {
+  list-style-type: none;
+}
+
+button, input, select {
+  @mixin pixelToRem 4, padding;
+  border: 1px solid #333;
+  background-color: #fff;
+  color: #333;
+}

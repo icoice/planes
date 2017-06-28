@@ -1,0 +1,35 @@
+/**
+ * 设备适配
+ */
+
+/* 设备宽度 */
+$m00: 320px;
+$m01: 360px;
+$m02: 375px;
+$m03: 411px;
+$m04: 414px;
+$m05: 435px;
+$m06: 600px;
+
+/*  基准设备 */
+$standardMachine: $m04;
+$standardFontSize: 20;
+
+/*  对比基准，计算根元素的size */
+@define-mixin mediaRoot $machine {
+	html {
+		font-size: calc($(machine) / $standardMachine * $standardFontSize);
+	}
+}
+
+/*  按实际size计算rem */
+@define-mixin pixelToRem $size, $attribute {
+		$(attribute): calc($(size) / $standardFontSize)rem;
+}
+
+/*  等比缩放 */
+@each $machine in ($m00, $m01, $m02, $m03, $m04, $m05, $m06) {
+		@media (width >= $machine) {
+			@mixin mediaRoot $machine;
+		}
+}
