@@ -10,6 +10,12 @@
     overflow: hidden;
 }
 
+/* 解除封闭 */
+@define-mixin relieve-close {
+    position: static;
+    overflow: auto;
+}
+
 /*  满宽 */
 @define-mixin full-width {
     width: 100%;
