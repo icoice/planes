@@ -1,0 +1,60 @@
+@import "base.css";
+
+@define-mixin border-top $name,$bcolor {
+  $(name) {
+    @mixin close-element;
+    border: none;
+  }
+
+  $(name):after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    height: 1px;
+    transform: scale(0.5);
+    transform-origin: 0 0;
+    background-color: $(bcolor);
+  }
+}
+
+@define-mixin border-bottom $name,$bcolor {
+  $(name) {
+    @mixin close-element;
+    border: none;
+  }
+
+  $(name):after {
+    content: ' ';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 200%;
+    height: 1px;
+    transform: scale(0.5);
+    transform-origin: left bottom;
+    background-color: $(bcolor);
+  }
+}
+
+@define-mixin border-around $name, $bcolor,$radius {
+  $(name) {
+    @mixin close-element;
+    border: none;
+  }
+
+  $(name):after {
+     content: ' ';
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 200%;
+     height: 200%;
+     box-sizing: border-box;
+     border: 1px solid $(bcolor);
+     border-radius: $(radius)px;
+     transform: scale(0.5);
+     transform-origin: left top;
+  }
+}
