@@ -1,5 +1,5 @@
 /*  基准设备 */
-$standardMachine: 414px;
+$standardMachine: 414;
 $standardFontSize: 20;
 
 /*  对比基准，计算根元素的size */
