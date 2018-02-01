@@ -14,6 +14,11 @@ $standardFontSize: 20;
 		$(attribute): calc($(size) / $standardFontSize)rem;
 }
 
+/*  按实际size计算rem, 缩写 */
+@define-mixin PTR $size, $attribute {
+		$(attribute): calc($(size) / $standardFontSize)rem;
+}
+
 /*  重设响应缩放范围 */
 @define-mixin mediaResizeScope $start, $end, $size {
 	 @media (width >= $(start)) and (width <= $(end)) {
