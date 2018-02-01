@@ -76,7 +76,7 @@
   }
 }
 
-@define-mixin border-around $name, $bcolor, $radius {
+@define-mixin border $name, $bcolor, $radius {
   $(name) {
     @mixin close-element;
     border: none;

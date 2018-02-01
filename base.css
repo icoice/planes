@@ -21,8 +21,8 @@
     width: 100%;
 }
 
-/*  行 */
-@define-mixin row $amount {
+/*  列 */
+@define-mixin cols $amount {
     ul {
         @mixin full-width;
         @mixin close-element;

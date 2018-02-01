@@ -1,0 +1,8 @@
+@import 'media.css';
+
+/* PC - 设备宽度, 设备宽度高于800px为mobile */
+@mixin mediaResizeScope 800px, 1200px, 12px;
+@mixin mediaResizeScope 1200px, 1600px, 13px;
+@mixin mediaResizeScope 1600px, 1800px, 14px;
+@mixin mediaResizeScope 1800px, 2200px, 15px;
+@mixin mediaResizeScope 1200px, 2600px, 16px;

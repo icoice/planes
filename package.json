@@ -15,6 +15,7 @@
   "author": "chenfei",
   "peerDependencies": {
     "postcss": "^6.0.3",
+    "postcss-easy-import": "^3.0.0",
     "postcss-cssnext": "^2.11.0",
     "postcss-import": "^10.0.0",
     "postcss-loader": "^2.0.6",
