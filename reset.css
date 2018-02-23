@@ -29,11 +29,12 @@ ul, ol {
 }
 
 li {
+  @mixin clear-span;
   list-style-type: none;
 }
 
 button, input, select {
-  @mixin pixelToRem 4, padding;
+  @mixin clear-span;
   border: 1px solid #333;
   background-color: #fff;
   color: #333;

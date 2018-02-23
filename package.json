@@ -1,6 +1,6 @@
 {
   "name": "planes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "planes",
   "repository" : {
     "type": "git",
@@ -15,10 +15,10 @@
   "author": "chenfei",
   "peerDependencies": {
     "postcss": "^6.0.3",
-    "postcss-easy-import": "^3.0.0",
-    "postcss-cssnext": "^2.11.0",
-    "postcss-import": "^10.0.0",
-    "postcss-loader": "^2.0.6",
+    "postcss-define-units": "^1.1.2",
+    "postcss-import": "^11.0.0",
+    "postcss-loader": "^2.0.8",
+    "postcss-url": "^7.2.1",
     "precss": "^1.4.0"
   },
   "license": "MIT"

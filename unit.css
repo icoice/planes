@@ -1,0 +1,4 @@
+* {
+	--define: pxr (value / 20)rem;
+	--define: per (value / 10 * 100)%;
+}

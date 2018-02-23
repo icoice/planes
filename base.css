@@ -21,6 +21,24 @@
     width: 100%;
 }
 
+/* 元素居中 */
+@define-mixin elem-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 清除高亮、可选复制等内容 */
+@define-mixin clear-select {
+  -webkit-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
 /*  列 */
 @define-mixin cols $amount {
     ul {
