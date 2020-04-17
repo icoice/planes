@@ -1,0 +1,9 @@
+@custom-media --mobile (width < 769px);
+@custom-media --tablet-only (769px <= width < 1024px);
+@custom-media --touch (width <= 1024px);
+@custom-media --tablet (width >= 769px);
+@custom-media --desktop-only (1024px <= width < 1216px);
+@custom-media --desktop (width >= 1024px);
+@custom-media --widescreen-only (1216px <= width < 1408px);
+@custom-media --widescreen (width >= 1024px);
+@custom-media --fullhd (width >= 1408px);

@@ -1,8 +1,120 @@
-@import "base.css";
+@define-mixin filament $color, $radius {
+  & {
+    position: relative;
+    z-index: 1;
+    border: none;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    border: 1px solid $(color);
+    border-radius: $(radius);
+    transform: scale(0.5);
+    transform-origin: left top;
+  }
+}
+
+@define-mixin filament-bottom $color, $radius {
+  & {
+    position: relative;
+    z-index: 1;
+    border: none;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    width: 200%;
+    height: 1px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid $(color);
+    border-radius: $(radius);
+    transform: scale(0.5);
+    transform-origin: left bottom;
+  }
+}
+
+@define-mixin filament-left $color, $radius {
+  & {
+    position: relative;
+    z-index: 1;
+    border: none;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    border-left: 1px solid $(color);
+    border-radius: $(radius);
+    transform: scale(0.5);
+    transform-origin: left top;
+  }
+}
+
+@define-mixin filament-right $color, $radius {
+  & {
+    position: relative;
+    z-index: 1;
+    border: none;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    border-right: 1px solid $(color);
+    border-radius: $(radius);
+    transform: scale(0.5);
+    transform-origin: left top;
+  }
+}
+
+@define-mixin filament-clear {
+  & {
+    position: relative;
+    z-index: 1;
+    border: none;
+  }
+
+  &:before {
+    content: '';
+    display: none;
+    position: static;
+    top: 0;
+    left: 0;
+    width: auto;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    transform: none;
+  }
+}
 
 @define-mixin border $name, $bcolor, $radius {
   $(name) {
-    @mixin close-element;
+    position: relative;
     border: none;
   }
 
@@ -23,7 +135,7 @@
 
 @define-mixin border-top $name,$bcolor {
   $(name) {
-    @mixin close-element;
+    position: relative;
     border: none;
   }
 
@@ -42,7 +154,7 @@
 
 @define-mixin border-bottom $name,$bcolor {
   $(name) {
-    @mixin close-element;
+    position: relative;
     border: none;
   }
 
@@ -61,7 +173,7 @@
 
 @define-mixin border-left $name, $bcolor,$radius {
   $(name) {
-    @mixin close-element;
+    position: relative;
     border: none;
   }
 
@@ -82,7 +194,7 @@
 
 @define-mixin border-right $name, $bcolor,$radius {
   $(name) {
-    @mixin close-element;
+    position: relative;
     border: none;
   }
 
