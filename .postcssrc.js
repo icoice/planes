@@ -5,7 +5,7 @@ module.exports = {
     "postcss-easy-import": {},
     "postcss-import": {},
     "postcss-url": {},
-    "postcss-define-units": {},
+    "postcss-lilia-units": {},
     "postcss-mixins": {},
     "precss": {},
     "postcss-calc": {},
