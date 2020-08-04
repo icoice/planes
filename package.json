@@ -14,13 +14,6 @@
   ],
   "author": "chenfei",
   "peerDependencies": {
-    "postcss-scss": "^2.0.0",
-    "postcss": "^6.0.3",
-    "postcss-lilia-units": "^0.0.2",
-    "postcss-import": "^11.0.0",
-    "postcss-loader": "^2.0.8",
-    "postcss-url": "^8.0.0",
-    "precss": "^1.4.0"
   },
   "license": "MIT"
 }
