@@ -1,7 +1,6 @@
 @define-mixin filament $color, $radius {
   & {
     position: relative;
-    z-index: 1;
     border: none;
   }
 
@@ -21,36 +20,59 @@
   }
 }
 
-@define-mixin filament-bottom $color, $radius {
+@define-mixin filament-top $color, $radius {
   & {
     position: relative;
-    z-index: 1;
     border: none;
   }
 
   &:before {
     content: ' ';
     position: absolute;
-    top: auto;
-    right: auto;
-    bottom: 1px;
+    top: 0;
     left: 0;
     z-index: -1;
     width: 200%;
-    height: 1px;
+    height: 200%;
     box-sizing: border-box;
-    border: none;
-    border-bottom: 1px solid $(color);
+    border: 1px solid $(color);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
     border-radius: $(radius);
     transform: scale(0.5);
-    transform-origin: left bottom;
+    transform-origin: left top;
+  }
+}
+
+@define-mixin filament-bottom $color, $radius {
+  & {
+    position: relative;
+    border: none;
+  }
+
+  &:before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 200%;
+    height: 200%;
+    box-sizing: border-box;
+    border: 1px solid $(color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: $(radius);
+    transform: scale(0.5);
+    transform-origin: left top;
   }
 }
 
 @define-mixin filament-left $color, $radius {
   & {
     position: relative;
-    z-index: 1;
     border: none;
   }
 
@@ -62,6 +84,9 @@
     width: 1px;
     height: 200%;
     box-sizing: border-box;
+    border-top: none;
+    border-bottom: none;
+    border-right: none;
     border-left: 1px solid $(color);
     border-radius: $(radius);
     transform: scale(0.5);
@@ -72,7 +97,6 @@
 @define-mixin filament-right $color, $radius {
   & {
     position: relative;
-    z-index: 1;
     border: none;
   }
 
@@ -84,17 +108,19 @@
     width: 1px;
     height: 200%;
     box-sizing: border-box;
-    border-right: 1px solid $(color);
+    border: 1px solid $(color);
+    border-top: none;
+    border-bottom: none;
+    border-left: none;
     border-radius: $(radius);
     transform: scale(0.5);
     transform-origin: left top;
   }
 }
 
-@define-mixin filament-clear {
+@define-mixin filament-none {
   & {
     position: relative;
-    z-index: 1;
     border: none;
   }
 
@@ -109,106 +135,5 @@
     border: none;
     border-radius: 0;
     transform: none;
-  }
-}
-
-@define-mixin border $name, $bcolor, $radius {
-  $(name) {
-    position: relative;
-    border: none;
-  }
-
-  $(name):after {
-     content: ' ';
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 200%;
-     height: 200%;
-     box-sizing: border-box;
-     border: 1px solid $(bcolor);
-     border-radius: $(radius);
-     transform: scale(0.5);
-     transform-origin: left top;
-  }
-}
-
-@define-mixin border-top $name,$bcolor {
-  $(name) {
-    position: relative;
-    border: none;
-  }
-
-  $(name):before {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 200%;
-    height: 1px;
-    transform: scale(0.5);
-    transform-origin: 0 0;
-    background-color: $(bcolor);
-  }
-}
-
-@define-mixin border-bottom $name,$bcolor {
-  $(name) {
-    position: relative;
-    border: none;
-  }
-
-  $(name):after {
-    content: ' ';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 200%;
-    height: 1px;
-    transform: scale(0.5);
-    transform-origin: left bottom;
-    background-color: $(bcolor);
-  }
-}
-
-@define-mixin border-left $name, $bcolor,$radius {
-  $(name) {
-    position: relative;
-    border: none;
-  }
-
-  $(name):after {
-     content: ' ';
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 200%;
-     height: 200%;
-     box-sizing: border-box;
-     border-left: 1px solid $(bcolor);
-     border-radius: $(radius);
-     transform: scale(0.5);
-     transform-origin: left top;
-  }
-}
-
-@define-mixin border-right $name, $bcolor,$radius {
-  $(name) {
-    position: relative;
-    border: none;
-  }
-
-  $(name):after {
-     content: ' ';
-     position: absolute;
-     top: 0;
-     left: 0;
-     width: 200%;
-     height: 200%;
-     box-sizing: border-box;
-     border-right: 1px solid $(bcolor);
-     border-radius: $(radius);
-     transform: scale(0.5);
-     transform-origin: left top;
   }
 }
